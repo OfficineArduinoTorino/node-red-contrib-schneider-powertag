@@ -1,0 +1,12 @@
+{
+  "name": "node-red-contrib-schneider-powertag",
+  "version": "0.0.5",
+  "description": "Node to read Schneider Powertags over Modbus TCP",
+  "author": "Alberto Perro",
+  "license": "ISC",
+  "node-red" : {
+        "nodes": {
+            "powertag": "powertag.js"
+        }
+    }
+}

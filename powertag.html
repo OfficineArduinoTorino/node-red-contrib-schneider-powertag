@@ -1,0 +1,52 @@
+<script type="text/javascript">
+    RED.nodes.registerType('powerTag',{
+        category: 'function',
+        color: '#009E4D',
+        defaults: {
+            name: {value:""},
+            unitId: {value: "",required:true},
+            phase: {phase: "", required: true},
+            data: {value: "", required: true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "logo.png",
+        label: function() {
+            return this.name||"powerTag";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="powerTag">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-unitId"><i class="icon-tag"></i> Unit ID</label>
+        <input type="text" id="node-input-unitId" placeholder=" 123">
+    </div>
+    <div class="form-row">
+        <label for="node-input-phase"><i class="icon-tag"></i> Phase</label>
+         <select id="node-input-phase">
+           <option value="single">1PH+N</option>
+           <option value="triple">3PH / 3PH+N</option>
+        </select>
+    </div>
+    <div class="form-row">
+       <label for="node-input-data"><i class="icon-list"></i> Measure</label>
+       <select id="node-input-data">
+           <option value="current">Current</option>
+           <option value="voltage">Voltage</option>
+           <option value="actPower">Active Power</option>
+           <option value="totPower">Total Active Power</option>
+           <option value="totPFactor">Total Power Factor</option>
+           <option value="parEnergy">Partial Active Energy</option>
+           <option value="totEnergy">Total Active Energy</option>
+       </select>
+   </div>
+</script>
+
+<script type="text/x-red" data-help-name="powerTag">
+    <p>This node resumes the configuration parameters that are necessary to poll a Schneider PowerTag over Modbus TCP.</p>
+</script>
