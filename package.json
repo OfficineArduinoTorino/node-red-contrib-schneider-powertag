@@ -8,5 +8,25 @@
     "nodes": {
       "powertag": "powertag.js"
     }
-  }
+  },
+  "main": "powertag.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albydnc/node-red-contrib-schneider-powertag.git"
+  },
+  "keywords": [
+    "node-red",
+    "schneider",
+    "powertag",
+    "modbus",
+    "iot",
+    "albydnc"
+  ],
+  "bugs": {
+    "url": "https://github.com/albydnc/node-red-contrib-schneider-powertag/issues"
+  },
+  "homepage": "https://github.com/albydnc/node-red-contrib-schneider-powertag#readme"
 }
