@@ -1,0 +1,23 @@
+<script type="text/javascript">
+    RED.nodes.registerType('extractor',{
+        category: 'Powertag',
+        color: '#009E4D',
+        defaults: {
+            name: {value:""},
+            unitId: {value: ""},
+            phase: {phase: ""},
+            data: {value: ""}
+        },
+        inputs:1,
+        outputs:2,
+        icon: "logo.png",
+        label: function() {
+            return this.name||"extractor";
+        }
+    });
+</script>
+
+
+<script type="text/x-red" data-help-name="extractor">
+    <p>This node receives the response from MODBUS and changes the different format numbers to human readable.</p>
+</script>
