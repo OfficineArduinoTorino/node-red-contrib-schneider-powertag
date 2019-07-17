@@ -25,6 +25,7 @@ module.exports = function(RED) {
                     };
                 res.topic = "current";
                 res.format = "float32";
+                res.phase = "single";
               break;
               case 1:
               case "voltage":
@@ -36,6 +37,7 @@ module.exports = function(RED) {
                     };
                 res.topic = "voltage";
                 res.format = "float32";
+                res.phase = "single";
               break;
               case 2:
               case "actPower":
@@ -47,6 +49,7 @@ module.exports = function(RED) {
                     };
                 res.topic = "actPower";
                 res.format = "float32";
+                res.phase = "single";
               break;
               case 3:
               case "totPower":
@@ -58,6 +61,7 @@ module.exports = function(RED) {
                     };
                 res.topic = "totPower";
                 res.format = "float32";
+                res.phase = "single";
               break;
               case 4:
               case "totPFactor":
@@ -69,6 +73,7 @@ module.exports = function(RED) {
                     };
                 res.topic = "totPFactor";
                 res.format = "float32";
+                res.phase = "single";
               break;
               case 5:
               case "parEnergy":
@@ -80,6 +85,7 @@ module.exports = function(RED) {
                     };
                 res.topic = "parEnergy";
                 res.format = "int64";
+                res.phase = "single";
               break;
               case 6:
               case "totEnergy":
@@ -91,6 +97,7 @@ module.exports = function(RED) {
                     };
                 res.topic = "totEnergy";
                 res.format = "int64";
+                res.phase = "single";
               break;
             }
           }else{
@@ -102,10 +109,11 @@ module.exports = function(RED) {
                     fc: 3,
                     unitid: settings.unitId,
                     address: 2999,
-                    quantity: 2,
+                    quantity: 6,
                     };
                 res.topic = "current";
                 res.format = "float32";
+                res.phase = "multi";
               break;
               case 1:
               case "voltage":
@@ -113,10 +121,11 @@ module.exports = function(RED) {
                     fc: 3,
                     unitid: settings.unitId,
                     address: 3027,
-                    quantity: 2,
+                    quantity: 6,
                     };
                 res.topic = "voltage";
                 res.format = "float32";
+                res.phase = "multi";
               break;
               case 2:
               case "actPower":
@@ -124,10 +133,11 @@ module.exports = function(RED) {
                     fc: 3,
                     unitid: settings.unitId,
                     address: 3053,
-                    quantity: 2,
+                    quantity: 6,
                     };
                 res.topic = "actPower";
                 res.format = "float32";
+                res.phase = "multi";
               break;
               case 3:
               case "totPower":
@@ -139,6 +149,7 @@ module.exports = function(RED) {
                     };
                 res.topic = "totPower";
                 res.format = "float32";
+                res.phase = "multi";
               break;
               case 4:
               case "totPFactor":
@@ -150,6 +161,7 @@ module.exports = function(RED) {
                     };
                 res.topic = "totPFactor";
                 res.format = "float32";
+                res.phase = "multi";
               break;
               case 5:
               case "parEnergy":
@@ -161,6 +173,7 @@ module.exports = function(RED) {
                     };
                 res.topic = "parEnergy";
                 res.format = "int64";
+                res.phase = "multi";
               break;
               case 6:
               case "totEnergy":
@@ -172,6 +185,7 @@ module.exports = function(RED) {
                     };
                 res.topic = "totEnergy";
                 res.format = "int64";
+                res.phase = "multi";
               break;
             }
           }
