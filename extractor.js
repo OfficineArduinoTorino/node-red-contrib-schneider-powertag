@@ -57,17 +57,18 @@ module.exports = function(RED) {
         }
  }
 
-          
+
 //change Run Count from seconds to hours
 //!!this needs updating to work with new powerTagNode!!
-if (msg.ptTopic === "loadRunHourCounter") {
-    var secToHour = (realValue / 3600).toFixed(0);
+if (msg.topic === "loadRunHourCounter") {
+    seconds = msg.payload;
+    var secToHour = (seconds / 3600).toFixed(0);
     msg.payload = secToHour;
     return [ msg, null ];
 }
 //!!this needs updating to work with new powerTagNode!!
 // 0= Normal, 1 = Volt Loss, 2 = Overcurrent Trip
-if (msg.ptTopic === "mcbTrip") {
+if (msg.topic === "mcbTrip") {
     msg.payload = msg.payload.buffer.readUIntBE(0,4);
     return [ null, msg ];
     }

@@ -3,7 +3,7 @@
 This module is a painless-to-use UI to read data from a Schneider PowerTag energy monitoring environment.
 This module is NOT a Modbus TCP client, it is meant to be used with **node-red-contrib-modbus** modules.
 
-## How to setup
+## How to use
 
 ### powerTag node
 Use the `powerTag` node to configure which information you want to request from the gateway.
